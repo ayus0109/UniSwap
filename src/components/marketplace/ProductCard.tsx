@@ -62,6 +62,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             alt={product.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
             loading="lazy"
+            onError={(e) => {
+              (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+            }}
           />
 
           {/* Top Overlay Badges */}
@@ -144,6 +147,9 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                   src={product.sellerAvatar}
                   alt={product.sellerName}
                   className="w-5 h-5 rounded-full object-cover shrink-0"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&q=80&w=800';
+                  }}
                 />
               ) : (
                 <div className="w-5 h-5 rounded-full bg-[#E9E3DC] flex items-center justify-center font-bold text-[10px] text-[#242321]">

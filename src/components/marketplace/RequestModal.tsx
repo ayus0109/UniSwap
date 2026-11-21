@@ -193,6 +193,9 @@ export const RequestModal: React.FC<RequestModalProps> = ({
                 src={product.imageUrl}
                 alt={product.title}
                 className="w-14 h-14 rounded-lg object-cover border border-[#E9E3DC]"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+                }}
               />
               <div className="min-w-0 flex-1">
                 <h4 className="text-xs font-bold text-[#242321] truncate">

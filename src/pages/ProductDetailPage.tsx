@@ -113,6 +113,9 @@ export const ProductDetailPage: React.FC = () => {
               src={product.imageUrl}
               alt={product.title}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+              }}
             />
 
             {/* Badges Overlay */}
@@ -298,6 +301,9 @@ export const ProductDetailPage: React.FC = () => {
                   src={product.sellerAvatar}
                   alt={product.sellerName}
                   className="w-12 h-12 rounded-full object-cover ring-2 ring-[#E9E3DC]"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&q=80&w=800';
+                  }}
                 />
               ) : (
                 <div className="w-12 h-12 rounded-full bg-[#A51E2B] text-white font-heading font-bold text-lg flex items-center justify-center">

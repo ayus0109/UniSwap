@@ -175,6 +175,9 @@ export const SellPage: React.FC = () => {
               src={publishedProduct.imageUrl}
               alt={publishedProduct.title}
               className="w-16 h-16 rounded-lg object-cover border border-[#E9E3DC]"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+              }}
             />
             <div className="min-w-0 flex-1">
               <h4 className="text-xs font-bold text-[#242321] truncate">
@@ -495,6 +498,9 @@ export const SellPage: React.FC = () => {
                   src={imageUrl}
                   alt="Preview"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+                  }}
                 />
                 <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5">
                   <span className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${

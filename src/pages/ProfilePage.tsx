@@ -135,6 +135,9 @@ export const ProfilePage: React.FC = () => {
               src={user.avatar}
               alt={user.name}
               className="w-20 h-20 rounded-2xl object-cover ring-2 ring-[#E9E3DC]"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&q=80&w=800';
+              }}
             />
             <span className="absolute -bottom-1 -right-1 w-5 h-5 bg-emerald-500 rounded-full border-2 border-white flex items-center justify-center text-white" title="Verified Campus Student">
               <CheckCircle2 className="w-3.5 h-3.5" />
@@ -267,6 +270,9 @@ export const ProfilePage: React.FC = () => {
                         src={item.imageUrl}
                         alt={item.title}
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+                        }}
                       />
                       <div className="absolute top-2 left-2 flex gap-1">
                         <span className="px-2 py-0.5 rounded text-[10px] font-bold bg-[#242321] text-white">
@@ -417,6 +423,9 @@ export const ProfilePage: React.FC = () => {
                         src={req.productImageUrl}
                         alt={req.productTitle}
                         className="w-14 h-14 rounded-lg object-cover border border-[#E9E3DC]"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+                        }}
                       />
                       <div className="space-y-1">
                         <div className="flex items-center gap-2">
@@ -518,6 +527,9 @@ export const ProfilePage: React.FC = () => {
                         src={req.productImageUrl}
                         alt={req.productTitle}
                         className="w-14 h-14 rounded-lg object-cover border border-[#E9E3DC]"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?auto=format&fit=crop&q=80&w=800';
+                        }}
                       />
                       <div className="space-y-1">
                         <h4 className="text-xs font-bold text-[#242321]">{req.productTitle}</h4>

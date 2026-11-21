@@ -155,6 +155,9 @@ export const Navbar: React.FC = () => {
                     src={user.avatar}
                     alt={user.name}
                     className="w-7 h-7 rounded-full object-cover ring-1 ring-[#E9E3DC]"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&q=80&w=800';
+                    }}
                   />
                   <div className="text-left hidden lg:block">
                     <p className="text-xs font-semibold text-[#242321] leading-tight flex items-center gap-1">
@@ -298,7 +301,13 @@ export const Navbar: React.FC = () => {
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex items-center gap-2.5 px-3 py-2 rounded-md text-sm font-medium text-[#242321]"
                 >
-                  <img src={user.avatar} className="w-6 h-6 rounded-full object-cover" />
+                  <img
+                    src={user.avatar}
+                    className="w-6 h-6 rounded-full object-cover"
+                    onError={(e) => {
+                      (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1567168544646-208fa5d408fb?auto=format&fit=crop&q=80&w=800';
+                    }}
+                  />
                   <span>My Profile ({user.name})</span>
                 </Link>
                 <button
